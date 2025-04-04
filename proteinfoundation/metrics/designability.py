@@ -294,6 +294,7 @@ def scRMSD(
     num_seq_per_target: int = 8,
     pmpnn_sampling_temp: float = 0.1,
     ret_min=True,
+    verbose: bool = False,
 ) -> Union[float, List[float]]:
     """
     Evaluates self-consistency RMSD metrics for given pdb.
@@ -317,6 +318,7 @@ def scRMSD(
         tmp_path,
         num_seq_per_target=num_seq_per_target,
         sampling_temp=pmpnn_sampling_temp,
+        verbose=verbose,
     )  # List of sequences
 
     logger.info(f"Running ESMFold for {name}")
